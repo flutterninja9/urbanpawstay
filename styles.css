@@ -812,3 +812,11 @@ a { text-decoration: none; color: inherit; }
   .pricing__card-inner { padding: 32px 24px; }
   .whatsapp-float { bottom: 20px; right: 20px; width: 52px; height: 52px; }
 }
+
+/* --- FAQ --- */
+.faq { padding: 80px 0; background: var(--beige); }
+.faq__list { max-width: 680px; margin: 0 auto; }
+.faq__item { padding: 24px 0; border-bottom: 1px solid var(--beige-mid); }
+.faq__item:last-child { border-bottom: none; }
+.faq__q { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 600; color: var(--charcoal); margin-bottom: 8px; }
+.faq__a { color: var(--charcoal-light); font-size: 0.95rem; line-height: 1.7; }
