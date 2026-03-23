@@ -409,6 +409,40 @@ a { text-decoration: none; color: inherit; }
 }
 .gallery__item:hover { transform: scale(0.98); }
 
+.space__instagram {
+  text-align: center;
+  margin-top: 48px;
+}
+.instagram-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border: 1.5px solid rgba(46,46,46,0.18);
+  border-radius: 100px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--charcoal);
+  transition: background var(--transition), border-color var(--transition), color var(--transition);
+}
+.instagram-cta:hover {
+  background: var(--charcoal);
+  border-color: var(--charcoal);
+  color: var(--white);
+}
+.instagram-cta__handle {
+  font-weight: 600;
+  opacity: 0.6;
+}
+.instagram-cta:hover .instagram-cta__handle { opacity: 0.8; }
+
+.footer__instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
 /* ============================================
    FEATURES
    ============================================ */
