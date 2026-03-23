@@ -759,7 +759,8 @@ a { text-decoration: none; color: inherit; }
   .hero { padding: 100px 0 60px; min-height: auto; }
   .hero__inner { grid-template-columns: 1fr; gap: 40px; }
   .hero__visual { order: -1; }
-  .hero__img-wrap { aspect-ratio: 16/9; max-height: 380px; }
+  .hero__img-wrap { aspect-ratio: 4/3; max-height: 320px; }
+  .hero__img-wrap img { object-position: top center; }
   .space__gallery { grid-template-columns: 1fr; }
   .gallery__side { grid-template-columns: repeat(2, 1fr); }
   .gallery__main { aspect-ratio: 16/10; }
