@@ -2,6 +2,9 @@
 // URBAN PAW STAY — JAVASCRIPT
 // ============================================
 
+// --- Copyright Year ---
+document.getElementById('footer-year').textContent = new Date().getFullYear();
+
 // --- Sticky Nav ---
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {

@@ -16,7 +16,7 @@
   --sage-dark: #658485;
   --sage-light: #A8C4C5;
   --white: #FFFFFF;
-  --text-muted: #888;
+  --text-muted: #767676;
 
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body: 'Inter', -apple-system, sans-serif;
@@ -33,6 +33,29 @@
 }
 
 html { scroll-behavior: smooth; }
+
+/* --- SKIP NAV --- */
+.skip-nav {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  background: var(--charcoal);
+  color: var(--white);
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  z-index: 9999;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: top 0.2s ease;
+}
+.skip-nav:focus { top: 16px; }
+
+/* --- FOCUS STYLES --- */
+:focus-visible {
+  outline: 2px solid var(--sage-dark);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
 
 body {
   font-family: var(--font-body);
@@ -515,7 +538,7 @@ a { text-decoration: none; color: inherit; }
   font-family: var(--font-heading);
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--beige-mid);
+  color: var(--sage-light);
   line-height: 1;
   margin-bottom: 16px;
 }
@@ -625,11 +648,22 @@ a { text-decoration: none; color: inherit; }
   gap: 80px;
   align-items: center;
 }
+.pricing__starting {
+  font-size: 1.4rem;
+  color: var(--charcoal);
+  margin: 16px 0 8px;
+}
+.pricing__starting strong {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--sage-dark);
+}
 .pricing__text {
   font-size: 1.05rem;
   color: var(--charcoal-light);
   line-height: 1.7;
-  margin: 20px 0 36px;
+  margin: 0 0 36px;
   max-width: 440px;
 }
 .pricing__card { }
@@ -832,3 +866,18 @@ a { text-decoration: none; color: inherit; }
 .faq__item:last-child { border-bottom: none; }
 .faq__q { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 600; color: var(--charcoal); margin-bottom: 8px; }
 .faq__a { color: var(--charcoal-light); font-size: 0.95rem; line-height: 1.7; }
+
+/* --- REDUCED MOTION --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .fade-up {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html { scroll-behavior: auto; }
+}
