@@ -409,6 +409,16 @@ a { text-decoration: none; color: inherit; }
 }
 .gallery__item:hover { transform: scale(0.98); }
 
+.gallery__more {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+.gallery__more .gallery__item {
+  aspect-ratio: 4/3;
+}
+
 .space__instagram {
   text-align: center;
   margin-top: 48px;
@@ -798,6 +808,7 @@ a { text-decoration: none; color: inherit; }
   .space__gallery { grid-template-columns: 1fr; }
   .gallery__side { grid-template-columns: repeat(2, 1fr); }
   .gallery__main { aspect-ratio: 16/10; }
+  .gallery__more { grid-template-columns: repeat(2, 1fr); }
   .features__grid { grid-template-columns: 1fr; }
   .trust__stats { gap: 24px; }
   .stat__divider { display: none; }
