@@ -88,12 +88,6 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* Staggered delays for child elements */
-.features__grid .fade-up:nth-child(1) { transition-delay: 0s; }
-.features__grid .fade-up:nth-child(2) { transition-delay: 0.08s; }
-.features__grid .fade-up:nth-child(3) { transition-delay: 0.16s; }
-.features__grid .fade-up:nth-child(4) { transition-delay: 0.24s; }
-.features__grid .fade-up:nth-child(5) { transition-delay: 0.32s; }
-.features__grid .fade-up:nth-child(6) { transition-delay: 0.40s; }
 
 /* --- BUTTONS --- */
 .btn {
@@ -452,8 +446,8 @@ a { text-decoration: none; color: inherit; }
 
 .features__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
 }
 
 .feature-card {
@@ -465,6 +459,39 @@ a { text-decoration: none; color: inherit; }
 .feature-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-md);
+}
+
+/* Wide cards — span both columns */
+.feature-card--wide {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 36px 40px;
+}
+
+.feature-card--wide .feature-card__icon {
+  font-size: 2.8rem;
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+/* Sage-tinted hero card */
+.feature-card--sage {
+  background: rgba(122,158,159,0.1);
+  border: 1px solid rgba(122,158,159,0.25);
+}
+
+/* Forest-accented card */
+.feature-card--accent {
+  background: rgba(26,46,26,0.05);
+  border: 1px solid rgba(26,46,26,0.1);
+}
+
+/* Subtle closing wide card */
+.feature-card--subtle {
+  background: var(--beige-mid);
+  box-shadow: none;
 }
 .feature-card__icon {
   font-size: 2rem;
@@ -786,7 +813,8 @@ a { text-decoration: none; color: inherit; }
    RESPONSIVE
    ============================================ */
 @media (max-width: 1024px) {
-  .features__grid { grid-template-columns: repeat(2, 1fr); }
+  .features__grid { grid-template-columns: 1fr; }
+  .feature-card--wide { flex-direction: column; text-align: center; gap: 16px; padding: 28px 24px; }
   .how__steps { flex-direction: column; gap: 0; }
   .step { width: 100%; }
   .step__arrow {
@@ -815,6 +843,7 @@ a { text-decoration: none; color: inherit; }
   .gallery__more { grid-template-columns: repeat(2, 1fr); }
   .hero__scroll-hint { display: none; }
   .features__grid { grid-template-columns: 1fr; }
+  .feature-card--wide { padding: 24px 20px; }
   .trust__stats { gap: 24px; }
   .stat__divider { display: none; }
   .hero__ctas { flex-direction: column; }
