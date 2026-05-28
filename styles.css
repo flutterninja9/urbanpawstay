@@ -311,28 +311,6 @@ a { text-decoration: none; color: inherit; }
   color: var(--text-muted);
 }
 
-.hero__scroll-hint {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0.4;
-}
-.hero__scroll-hint span {
-  display: block;
-  width: 1.5px;
-  height: 48px;
-  background: var(--charcoal);
-  margin: 0 auto;
-  animation: scrollLine 2s ease-in-out infinite;
-}
-@keyframes scrollLine {
-  0% { transform: scaleY(0); transform-origin: top; }
-  50% { transform: scaleY(1); transform-origin: top; }
-  51% { transform: scaleY(1); transform-origin: bottom; }
-  100% { transform: scaleY(0); transform-origin: bottom; }
-}
-
 /* Stagger hero animations */
 .hero .fade-up:nth-child(1) { transition-delay: 0.1s; }
 .hero .fade-up:nth-child(2) { transition-delay: 0.2s; }
