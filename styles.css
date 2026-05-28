@@ -159,6 +159,7 @@ a { text-decoration: none; color: inherit; }
   line-height: 1.2;
   color: var(--charcoal);
   margin-bottom: 16px;
+  text-wrap: balance;
 }
 .section-sub {
   font-size: 1.05rem;
@@ -253,6 +254,7 @@ a { text-decoration: none; color: inherit; }
   color: var(--charcoal);
   margin-bottom: 24px;
   letter-spacing: -0.02em;
+  text-wrap: balance;
 }
 .hero__headline em {
   font-style: italic;
@@ -366,6 +368,7 @@ a { text-decoration: none; color: inherit; }
   line-height: 1.2;
   margin-bottom: 24px;
   letter-spacing: -0.01em;
+  text-wrap: balance;
 }
 .trust__body {
   font-size: 1.1rem;
@@ -736,6 +739,7 @@ a { text-decoration: none; color: inherit; }
   line-height: 1.2;
   color: var(--charcoal);
   margin-bottom: 16px;
+  text-wrap: balance;
 }
 .cta-final p {
   font-size: 1.05rem;
