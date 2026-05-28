@@ -45,3 +45,35 @@ steps.forEach((step, i) => {
   step.classList.add('fade-up');
   observer.observe(step);
 });
+
+function initFAQ() {
+  const items = document.querySelectorAll('.faq__item');
+  items.forEach(item => {
+    const btn = item.querySelector('.faq__q');
+    const wrap = item.querySelector('.faq__a-wrap');
+    if (!btn || !wrap) return;
+
+    btn.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+
+      // Close all items
+      items.forEach(i => {
+        i.classList.remove('open');
+        const b = i.querySelector('.faq__q');
+        const w = i.querySelector('.faq__a-wrap');
+        if (b) b.setAttribute('aria-expanded', 'false');
+        if (w) { w.style.maxHeight = null; w.setAttribute('aria-hidden', 'true'); }
+      });
+
+      // Open the clicked item if it was closed
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+        wrap.style.maxHeight = wrap.scrollHeight + 'px';
+        wrap.setAttribute('aria-hidden', 'false');
+      }
+    });
+  });
+}
+
+initFAQ();
