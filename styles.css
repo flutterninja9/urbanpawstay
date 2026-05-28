@@ -327,18 +327,6 @@ a { text-decoration: none; color: inherit; }
   color: var(--white);
 }
 .trust__inner { text-align: center; }
-.trust__tag {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--sage-light);
-  background: rgba(122,158,159,0.2);
-  padding: 6px 16px;
-  border-radius: 50px;
-  margin-bottom: 24px;
-}
 .trust__headline {
   font-family: var(--font-heading);
   font-size: clamp(2.2rem, 4vw, 3.5rem);
